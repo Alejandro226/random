@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Pictures</title>
+</head>
+<body>
+  <img id="randomImage" src="">
+  <button onclick="generateRandomImage()">Generate Random Image</button>
+  <script>
+    var images = ["perple cool aid.jpg", "image2.jpg", "dog-fnaf.gif", "drake-year-end.jpg", "FMVxcwNX0AAJA7D.jpg", "rizz-game-v0-0ehf33trpl7b1.webp", "NQWnAIvIeMHfclH-400x400-noPad.webp"]; // Add the file names of your images here
+    function generateRandomImage() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      document.getElementById("randomImage").src = images[randomIndex];
+    }
+    document.addEventListener("keydown", function(event) {
+      if (event.code === "Space") {
+        generateRandomImage();
+      }
+    });
+  </script>
+</body>
+</html>
